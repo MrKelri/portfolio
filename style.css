@@ -1,33 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&family=Poiret+One&display=swap');
+
+*{
+    font-family: 'Charis SIL', serif;
+    /* font-weight: 300; */
+}
+h1, h2{
+    font-family: 'Poiret One', sans-serif;
+    font-weight: 300;
+    letter-spacing: 7px;
+    padding-top: 10px;
+    margin-top: 10px;
+    /* font-size: large; */
+}
+body{
+    padding: 0;
+    overflow-x: hidden;
+}
 h2{
     text-align: center;
+    margin: 0;
 }
 img{
-    max-width: 80vw;
+    max-width: 100%;
     align-self: center;
+    border-radius: 2rem;
+}
+.image{
+    position: relative;
+}
+.overlay{
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    height: 99%;
+    background: rgba(255, 228, 196, 0.5);
+    border-radius: 2rem;
 }
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
+}
+.c-l, .c-c, .c-r{
+    display: flex;
+}
+.c-l img, .c-r img{
+    max-width: 80%;
+}
+.c-l{
+justify-content: start;
+}
+.c-r{
+justify-content: end;
+}
+.c-c{
+justify-content: center;
+}
+.c-c img{
+    max-width: 20%;
 }
 .navigation{
+    max-width: 350px;
+    align-self: end;
     display: flex;
+    align-items: end;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
+    border: 0 solid hsl(33, 100%, 95%);
+    border-right-width: 4px;
+    padding-right: 10px;
 }
+
 .btn{
-    width: max-content;
-    padding: 5px 10px;
-    background-color: bisque; 
-    border: 2px solid lightslategray; 
-    border-radius: 2rem; 
+    font-family: 'Poiret One', sans-serif;
+    letter-spacing: 4px;
+    max-width: max-content;
+    padding: 5px 14px;
+    border: 0 solid lightslategray; 
+    /* border-radius: 2rem;  */
     text-align: center; 
     text-decoration: none; 
-    color: gray; 
+    background-color: gray; 
+    color: white; 
     font-size: medium;
 }
 .btn-back{
+    z-index: 5;
     position: sticky; 
     top: 30px; 
     left: 10px;
@@ -35,6 +95,7 @@ img{
     transition-duration: 500ms;
     background-color: lightslategray; 
     color: white;
+    margin-bottom: 10px;
 }
 .btn:hover{
     background-color: hsl(33, 100%, 95%); 
@@ -42,4 +103,16 @@ img{
 }
 .btn-back:hover{
     opacity: 1;
+}
+#counter-js-overlay{
+    /* background-color: transparent; */
+    background-color: rgba(255, 228, 196,0.8);
+    height: auto;
+    top: 40%;
+    border-radius: 0;
+}
+#counter-js-overlay:hover{
+    color: blue;
+    background-color: rgba(255, 228, 196,0.6);
+    /* opacity: 0.5; */
 }
